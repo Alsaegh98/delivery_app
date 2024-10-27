@@ -2,7 +2,7 @@
 
 # Idea description
 
-This delivery application is designed for those who value their time and hate traffic. At packngo we understand the hassle of busy streets and long queues. That’s why packing is here to make your life easier by offering the most affordable and reliable delivery solutions.
+This delivery application is designed for those who value their time and hate traffic. At packngo we understand the hassle of busy streets and long queues. That’s why packngo is here to make your life easier by offering the most affordable and reliable delivery solutions.
 
 
 # Data models
