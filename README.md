@@ -38,32 +38,31 @@ This delivery application is designed for those who value their time and hate tr
 
 Files
 - [ ] Server.js
-Require items
 - [ ] Package.json
 - [ ] Package-lock.json
 - [ ] Gitignore
 - [ ] .env
 - [ ] CSS sheet
-Controller directory
+<li>Controller directory</li>
 - [ ] Auth.js
 * User information
 - [ ] Orders.js
-Router.crud
+* Router.crud
 Middleware directory
 - [ ] Is-signed-in.js
 - [ ] Pass-user-to-view.js
-Models directory
+<li> Models directory </li>
 - [ ] Order.js
 * OrderSchema
 - [ ] User.js
 * userSchema
-Views directory
+<li> Views directory </li>
 - [ ] Index.ejs
 * Landing page
-Inside the views directory create auth directory
+<li> Inside the views directory create auth directory </li>
 - [ ] Sign-in.ejs
 - [ ] Sign-up.ejs
-Inside the views directory create orders directory
+<li>Inside the views directory create orders directory</li>
 - [ ] Edit.ejs
 * Edit button in the view order page
 - [ ] index.ejs
@@ -72,5 +71,5 @@ Inside the views directory create orders directory
 * Add a new order
 - [ ] Show.ejs
 * Ill make the order has been delivered button and delete button
-Inside the views directory create partials directory
+<li>Inside the views directory create partials directory</li>
 - [ ] _navbar.ejs
