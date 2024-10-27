@@ -45,9 +45,9 @@ This delivery application is designed for those who value their time and hate tr
 - [ ] CSS sheet
 # Controller directory
 - [ ] Auth.js
- User information
+ * User information
 - [ ] Orders.js
- Router.crud
+ * Router.crud
 # Middleware directory
 - [ ] Is-signed-in.js
 - [ ] Pass-user-to-view.js
