@@ -23,5 +23,8 @@
     <p>You don't own this, <%= order.owner.username %> does!</p>
     <% } %>
 
+    <form action="/orders/<%= order._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete this order</button>
+      </form>
   </body>
 </html>

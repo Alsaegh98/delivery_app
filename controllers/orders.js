@@ -44,5 +44,19 @@ router.get("/new" , (req , res) => {
     }
   });
   
-
+  router.delete('/:orderId', async (req, res) => {
+    try {
+      const order = await Order.findById(req.params.orderId)
+  
+      if (order.owner.equals(req.session.user._id)) {
+        await order.deleteOne()
+        res.redirect('/orders')
+      } else {
+        res.send("no premission for that.")
+      }
+    } catch (error) {
+      console.log(error)
+      res.redirect('/')
+    }
+  })
 module.exports = router;
