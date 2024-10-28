@@ -7,9 +7,11 @@ const methodOverride = require('method-override');
 const morgan = require('morgan');
 const session = require('express-session');
 
-//require middleware
 
 const isSignedIn = require('./middleware/is-signed-in.js');
+//require middleware
+const passUserToView = require('./middleware/pass-user-to-view.js');
+
 
 
 const authController = require('./controllers/auth.js');
@@ -34,6 +36,9 @@ app.use(
     saveUninitialized: true,
   })
 );
+
+app.use(passUserToView);
+
 
 app.get('/', (req, res) => {
   res.render('index.ejs', {

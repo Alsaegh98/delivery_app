@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const orderSchema = new mongoose.Schema({
 
-    Address: {
+    address: {
       type: String,
       required: true,
     },
@@ -18,7 +18,7 @@ const orderSchema = new mongoose.Schema({
       },
     notes: {
         type: String,
-      },
+       },
 
       owner: {
         type: mongoose.Schema.Types.ObjectId,
