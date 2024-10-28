@@ -7,6 +7,11 @@ const methodOverride = require('method-override');
 const morgan = require('morgan');
 const session = require('express-session');
 
+//require middleware
+
+const isSignedIn = require('./middleware/is-signed-in.js');
+
+
 const authController = require('./controllers/auth.js');
 const ordersController = require('./controllers/orders');
 
@@ -45,7 +50,7 @@ app.get('/vip-lounge', (req, res) => {
 });
 
 app.use('/auth', authController);
-app.use('/orders', ordersController);
+app.use('/orders', isSignedIn, ordersController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
