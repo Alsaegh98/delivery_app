@@ -6,7 +6,7 @@ const orderSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    contactNumber: {
+    number: {
       type: Number,
       required: true,
     },
@@ -27,6 +27,6 @@ const orderSchema = new mongoose.Schema({
 
   })
   
-  const order = mongoose.model('order', orderSchema)
+  const Order = mongoose.model('Order', orderSchema)
   
-  module.exports = order
+  module.exports = Order

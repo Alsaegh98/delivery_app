@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const order = require('../models/order');
+const Order = require('../models/order');
 
 router.get('/', async (req, res) => {
     try {
@@ -16,15 +16,33 @@ router.get('/', async (req, res) => {
     }
   })
 
-router.get('/new', (req, res) => {
-    res.render('listings/new.ejs')
-  })
+// router.get('/new', async (req, res) => {
+//     res.render('orders/new.ejs');
+//   });
+router.get("/new" , (req , res) => {
+    res.render("orders/new.ejs")
+})
 
   router.post('/', async (req, res) => {
     req.body.owner = req.session.user._id
-    await Listing.create(req.body)
+    await Order.create(req.body)
     res.redirect('/orders')
   })
+  
+  router.get('/:orderId', async (req, res) => {
+    try {
+      const populatedOrders = await Order.findById(
+        req.params.orderId
+      ).populate('owner');
+  
+      res.render('orders/show.ejs', {
+        order: populatedOrders,
+      });
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
   
 
 module.exports = router;

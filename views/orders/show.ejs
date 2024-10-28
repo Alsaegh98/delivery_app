@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= order.number %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1>A order from <%= order.number %></h1>
+
+    <h2>Details</h2>
+    <p>address: <%= order.address %></p>
+    <p>type: <%= order.type %></p>
+    
+
+    <h2>Owner</h2>
+    <% if (order.owner._id.equals(user._id)) { %>
+    <p>You own this!</p>
+  
+    <% } else { %>
+    <p>You don't own this, <%= order.owner.username %> does!</p>
+    <% } %>
+
+  </body>
+</html>
