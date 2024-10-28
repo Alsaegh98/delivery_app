@@ -8,8 +8,9 @@ This delivery application is designed for those who value their time and hate tr
 # Data models
 
 <img src="/plan/8BAB0917-C78B-41E0-955D-F82B92A6F319.jpeg" alt="Authentication">
-
-<img src="/plan/DD6E6F14-70B4-4D3D-BA57-2A04F62861E2.jpeg" alt="Data Entity Fields">
+- Authentication
+<img src="/plan/D6C71F97-94FB-4731-A7C5-7EBA8260AA04.jpeg" alt="Data Entity Fields">
+- Data Entity Fields
 
 # User stories
 
@@ -21,17 +22,17 @@ This delivery application is designed for those who value their time and hate tr
 - As a user I want to add a button that says the order is delivered.
 
 # mock-ups
-
+- Landing page:
 <img src="/plan/AE97A6B6-0023-49CB-BEBB-48378BF9BA1D.jpeg" alt="Landing page:">
-
+- sign up page:
 <img src="/plan/CE469C5F-188E-4053-AA93-199E7DD07D16.jpeg" alt="sign up page:">
-
+- sign in page:
 <img src="/plan/8880BC43-CDE1-4D8E-B3AF-AE9771862353.jpeg" alt="sign in page:">
-
+- sign in  confirmation page:
 <img src="/plan/61D7F383-41E7-4DBD-9132-2D96FF5F9173.jpeg" alt="sign in  confirmation:">
-
+- view orders page:
 <img src="/plan/548CF372-237D-4874-9ECF-F4A2D0A15E94.jpeg" alt="view orders page:">
-
+- add orders page:
 <img src="/plan/B85ADFD8-13AB-472E-ACEA-7AD7D1EAB031.jpeg" alt="add orders page:">
 
 # Pushed code
