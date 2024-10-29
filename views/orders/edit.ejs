@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit this order</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>edit this order</h1>
+
+    <form action="/orders/<%= order._id %>?_method=PUT" method="POST">>
+        <label for="adress">address:</label>
+        <input
+          type="text"
+          name="address"
+          id="address"
+          value="<%= order.address %>"
+        />
+        <label for="number">Number:</label>
+        <input type="number" 
+        name="number" 
+        id="number" 
+        value="<%= order.number %>" />
+
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+          <option value="food">Food</option>
+          <option value="clothes">Clothes</option>
+          <option value="accessories">Accessories</option>
+          <option value="medicine">Medicine</option>
+        
+        </select>
+
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes"></textarea>
+        
+        <button type="submit" >Edit Order</button>
+      
+    </form>
+</body>
+</html>

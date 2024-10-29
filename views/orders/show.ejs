@@ -13,18 +13,21 @@
     <h2>Details</h2>
     <p>address: <%= order.address %></p>
     <p>type: <%= order.type %></p>
-    
+    <p>notes: <%= order.notes %></p>
 
     <h2>Owner</h2>
     <% if (order.owner._id.equals(user._id)) { %>
     <p>You own this!</p>
-  
+
+    <a href="/orders/<%= order._id %>/edit">Edit this order</a>
+    <form action="/orders/<%= order._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete this order</button>
+
     <% } else { %>
     <p>You don't own this, <%= order.owner.username %> does!</p>
     <% } %>
 
-    <form action="/orders/<%= order._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete this order</button>
+  
       </form>
   </body>
 </html>

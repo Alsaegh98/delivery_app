@@ -6,7 +6,7 @@ const Order = require('../models/order');
 router.get('/', async (req, res) => {
     try {
       const populatedOrders = await Order.find({}).populate('owner')
-      console.log('orders: ', populatedOrders)
+      // console.log('orders: ', populatedOrders)
       res.render('orders/index.ejs', {
         orders: populatedOrders,
       })
@@ -59,4 +59,33 @@ router.get("/new" , (req , res) => {
       res.redirect('/')
     }
   })
+
+  router.get('/:orderId/edit', async (req, res) => {
+    try {
+      const currentOrder = await Order.findById(req.params.orderId)
+      res.render('orders/edit.ejs', {
+        order: currentOrder})
+    } catch (error) {
+      console.log(error)
+      res.redirect('/')
+    }
+  })
+
+  router.put('/:orderId', async (req, res) => {
+    try {
+      const currentOrder = await Order.findById(req.params.orderId);
+      if (currentOrder.owner.equals(req.session.user._id)) {
+        console.log(req.body)
+        currentOrder.set(req.body);
+        console.log(currentOrder);
+        await currentOrder.save();
+        res.redirect('/orders');
+      } else {
+        res.send("no permission for that");
+      }
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
 module.exports = router;
