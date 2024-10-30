@@ -6,7 +6,6 @@ const Order = require('../models/order');
 router.get('/', async (req, res) => {
     try {
       const populatedOrders = await Order.find({}).populate('owner')
-      // console.log('orders: ', populatedOrders)
       res.render('orders/index.ejs', {
         orders: populatedOrders,
       })
@@ -16,9 +15,7 @@ router.get('/', async (req, res) => {
     }
   })
 
-// router.get('/new', async (req, res) => {
-//     res.render('orders/new.ejs');
-//   });
+
 router.get("/new" , (req , res) => {
     res.render("orders/new.ejs")
 })

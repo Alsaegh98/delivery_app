@@ -9,7 +9,7 @@ const session = require('express-session');
 
 
 const isSignedIn = require('./middleware/is-signed-in.js');
-//require middleware
+
 const passUserToView = require('./middleware/pass-user-to-view.js');
 
 
@@ -30,7 +30,7 @@ mongoose.connection.on('connected', () => {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -52,13 +52,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/vip-lounge', (req, res) => {
-  if (req.session.user) {
-    res.send(`Welcome to the party ${req.session.user.username}.`);
-  } else {
-    res.send('Sorry, no guests allowed.');
-  }
-});
+
 
 app.use('/auth', authController);
 app.use('/orders', isSignedIn, ordersController);
