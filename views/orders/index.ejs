@@ -11,19 +11,16 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <div class="index-header">
-    <h1>Here's all your orders</h1>
-    <a href="/orders/new">Add a New Order</a>
-  </div>
-
+      <h1>All Orders</h1>
+      <a href="/orders/new">+ Add Order</a>
+    </div>
     <div class="card-container">
-        <ul>
-          <% orders.forEach((order) => { %>
-        <li>
-          A order from <%= order.address %> owned by <%= order.owner.number %>.
-        </li>
-        <a href="/orders/<%= order._id %>">View more details.</a>
-        <% }) %>
-      </ul>
+      <% orders.forEach((order)=> { %>
+      <a href="/orders/<%= order._id %>">
+        <h4><%= order.city %> order</h4>
+        <p>Owned by <%= order.owner.username %></p>
+      </a>
+      <% }) %>
     </div>
   </body>
 </html>
