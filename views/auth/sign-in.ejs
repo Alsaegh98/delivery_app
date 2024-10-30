@@ -3,16 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script src="https://kit.fontawesome.com/392280dd3b.js" crossorigin="anonymous"></script>
   <title>Sign In</title>
 </head>
 <body>
-  <h1>Sign in</h1>
+  <div class="bro">
+  
+    <h1>Log In</h1>
+    <div class="sign-in-box">
+     <div class="left-box">
   <form action="/auth/sign-in" method="POST">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required />
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" required />
-    <button type="submit">Sign in</button>
+    <button type="submit">Sign In <span>&#x27f6;</span></button>
   </form>
+</div>
+<div class="right-box">
+  <!-- <a href=""><i class="fa-brands fa-facebook"></i> Connect with Facebook</a>
+  <a href=""><i class="fa-brands fa-twitter"></i> Connect with Twitter</a>
+  <a href=""><i class="fa-brands fa-google"></i> Connect with Google</a> -->
+  <img class="signin" src="https://thumbs.dreamstime.com/b/digital-welcome-text-green-binary-code-background-illustration-digital-welcome-text-green-binary-code-background-ai-326913873.jpg" alt="">
+</div>
+
+</div>
+</div>
 </body>
 </html>

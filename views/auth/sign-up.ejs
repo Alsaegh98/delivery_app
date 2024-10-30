@@ -3,23 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script src="https://kit.fontawesome.com/392280dd3b.js" crossorigin="anonymous"></script>
   <title>Sign Up</title>
 </head>
 <body>
-  <h1>Create a new account!</h1>
-  <form action="/auth/sign-up" method="POST">
+<div class="hero">
+  
+ <h1>create a new account!</h1>
+ <div class="sign-up-box">
+  <div class="left-box">
+ 
+ <form action="/auth/sign-up" method="POST">
     <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
+    <input type="text" name="username" id="username" required class="input-box" />
     <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
+    <input type="password" name="password" id="password" required class="input-box" />
     <label for="confirmPassword">Confirm Password:</label>
     <input 
       type="password"
       name="confirmPassword"
       id="confirmPassword"
-      required 
+      required class="input-box"
     />
-    <button type="submit">Sign up</button>
+    <button type="submit">Sign up <span>&#x27f6;</span></button>
   </form>
+</div>
+<div class="right-box">
+  <!-- <a href=""><i class="fa-brands fa-facebook"></i> Connect with Facebook</a>
+  <a href=""><i class="fa-brands fa-twitter"></i> Connect with Twitter</a>
+  <a href=""><i class="fa-brands fa-google"></i> Connect with Google</a> -->
+  <img class="signup" src="https://img.freepik.com/premium-vector/register-now-neon-light-sign_44523-545.jpg">
+</div>
+
+</div>
+</div>
 </body>
 </html>
