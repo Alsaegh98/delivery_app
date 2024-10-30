@@ -1,5 +1,9 @@
 # Project plan
 
+# screenshot of the app
+
+<img src="/plan/screenshot.jpeg">
+
 # Idea description
 
 This delivery application is designed for those who value their time and hate traffic. At packngo we understand the hassle of busy streets and long queues. That’s why packngo is here to make your life easier by offering the most affordable and reliable delivery solutions.
@@ -80,3 +84,17 @@ This delivery application is designed for those who value their time and hate tr
 * Ill make the order has been delivered button and delete button
 # Inside the views directory create partials directory
 - [ ] _navbar.ejs
+
+# technologies used:
+
+- node.js
+- HTML
+- CSS
+- mongoDB
+
+# Future enhancements
+
+- add more than 1 order in a single place new order
+- add a tracking sytem for the driver
+- add an other feature as an imported or exported order
+- add an address for the user that placed the order
