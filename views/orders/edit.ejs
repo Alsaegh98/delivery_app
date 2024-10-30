@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>edit this order</title>
+    <title>Edit</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>edit this order</h1>
+
+    <div class="new-container">
+      <div class="new-form-container">
+
+    <h1>Edit</h1>
 
     <form action="/orders/<%= order._id %>?_method=PUT" method="POST">>
         <label for="adress">address:</label>
@@ -39,5 +43,7 @@
         <button type="submit" >Edit Order</button>
       
     </form>
+      </div>
+    </div>
 </body>
 </html>
